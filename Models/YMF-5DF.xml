@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>YMF-5DF.ac</path>
+
+<nasal>
+<load>
+var livery_update = aircraft.livery_update.new("Aircraft/YMF-5DF/Models/Liveries");
+</load>
+<unload>
+livery_update.stop();
+</unload>
+</nasal>
+
+<animation>
+<type>material</type>
+<object-name>prop-low</object-name>
+<object-name>prop-shaftrear</object-name>
+<object-name>tire-cover-LH</object-name>
+<object-name>tire-cover-rh</object-name>
+<object-name>v-wing</object-name>
+<object-name>wing-lwr</object-name>
+<object-name>wing-upr</object-name>
+<object-name>wire_0</object-name>
+<object-name>wire_1</object-name>
+<object-name>wire </object-name>
+<object-name>fuel-line_0</object-name>
+<object-name>fuel-line_1</object-name>
+<object-name>fuel-line</object-name>
+<object-name>leg-cover-rh</object-name>
+<object-name>leg-stabi</object-name>
+<object-name>leg-cover-RH</object-name>
+<object-name>Cube.003_0</object-name>
+<object-name>rudder</object-name>
+<object-name>rudder-trim</object-name>
+<object-name>eleron-link-lh</object-name>
+<object-name>eleron-link-rh</object-name>
+<object-name>eleron-rh-lwr</object-name>
+<object-name>eleron-rh-upr</object-name>
+<object-name>elevater</object-name>
+<object-name>engin-cowl</object-name>
+<object-name>fillet-lh1</object-name>
+<object-name>fillet-lh2</object-name>
+<object-name>fillet-rear</object-name>
+<object-name>fillet-rh1</object-name>
+<object-name>fillet-rh2</object-name>
+<object-name>fillet-wing</object-name>
+<object-name>fuselage-front</object-name>
+<object-name>fuselage-rear</object-name>
+<object-name>fuselage-top</object-name>
+<object-name>fuselage-upr</object-name>
+<object-name>h-wing</object-name>
+<object-name>leg-cover-lh</object-name>
+<object-name>luggage_door</object-name>
+<object-name>pillar-ctr-lh</object-name>
+<object-name>pillar-ctr-rh</object-name>
+<object-name>pillar-lh</object-name>
+<object-name>pillar-rh</object-name>
+<object-name>prop </object-name>
+<object-name>prop-high</object-name>
+<object-name>cockpit_cowl</object-name>
+<object-name>cowl-add</object-name>
+<object-name>eleron-lh-lwr</object-name>
+<object-name>eleron-lh-upr</object-name>
+<object-name>wire-rod</object-name>
+<object-name>moulding</object-name>
+<object-name>windshield-frame</object-name>
+<object-name>windshield-frame1</object-name>
+<object-name>nav-light</object-name>
+<object-name>floats</object-name>
+<object-name>water-rudder-LH</object-name>
+<object-name>water-rudder-RH</object-name>
+<object-name>water-rudder-LH1</object-name>
+<object-name>water-rudder-RH1</object-name>
+<property-base>sim/model/livery</property-base>
+<texture-prop>texture</texture-prop>
+<texture>Aircraft/YMF-5DF/Models/Liveries/Default.png</texture>
+</animation>
+
+   <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>windshield</object-name>
+    <object-name>lenz</object-name>
+   </effect>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>glass_shader.png</texture>
+    <object-name>windshield</object-name>
+    <object-name>lenz</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>windshield</object-name>
+    <object-name>lenz</object-name>
+  </animation>
+
+<!-- Pushback -->
+<model>
+ <name>Pushback</name>
+ <path>Aircraft\YMF-5DF\Models\towing_car\towing_car.xml</path>
+  <condition>
+ <less-than-equals>
+     <property>velocities/airspeed-kt</property>
+     <value>80</value>
+ </less-than-equals>
+  </condition>
+   <offsets>
+            <x-m>-2.6</x-m>
+            <y-m>-0.00</y-m>
+            <z-m>-2.50</z-m>
+ </offsets>
+</model> 
+
+
+
+<!-- Trailer -->
+<model>
+ <name>Trailer</name>
+ <path>Aircraft\YMF-5DF\Models\trailer\trailer.xml</path>
+  <condition>
+ <less-than-equals>
+     <property>velocities/airspeed-kt</property>
+     <value>80</value>
+ </less-than-equals>
+  </condition>
+   <offsets>
+            <x-m>-2.5</x-m>
+            <y-m>-0.00</y-m>
+            <z-m>-2.50</z-m>
+ </offsets>
+</model> 
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/engine/engine.ac</path>
+	<offsets>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/interior.xml</path>
+	<offsets>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</offsets>
+</model>
+
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/pilot/pilot.xml</path>
+	<offsets>
+		<x-m> 0.68 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0.25 </z-m>
+	</offsets>
+</model>
+  <!-- propella --> 
+
+   <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>prop-low</object-name>
+    <object-name>prop-high</object-name>
+   </effect>
+
+
+  <animation>
+    <type>select</type>
+    <object-name>prop-high</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>1500</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>prop-low</object-name>
+    <condition>
+    <and>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>800</value>
+      </greater-than>
+      <less-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>1500</value>
+      </less-than>
+    </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>prop</object-name>
+    <condition>
+      <less-than>
+        <property>engines/engine[0]/rpm</property>
+	<value>800</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>prop</object-name>
+    <object-name>prop-low</object-name>
+    <property>engines/engine[0]/rpm</property>
+    <factor> 1 </factor>
+    <center>
+      <x-m> -2.3 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.0 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>prop-high</object-name>
+    <property>engines/engine[0]/rpm</property>
+    <factor> 2.2</factor>
+    <center>
+      <x-m> -2.3 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.0 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <object-name>prop-low</object-name>
+    <object-name>prop-high</object-name>
+    <nopreview/>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>elevater</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1.00 </ind><dep> -25.0 </dep></entry>
+      <entry><ind>  0.00 </ind><dep>   0.0 </dep></entry>
+      <entry><ind>  1.00</ind><dep>   25.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 3.880</x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.500 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rudder</object-name>
+    <object-name>rudder-trim</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1.00 </ind><dep>  20.0 </dep></entry>
+      <entry><ind>  0.00 </ind><dep>   0.0 </dep></entry>
+      <entry><ind>  1.00 </ind><dep> -20.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 4.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.500 </z-m>
+    </center>
+    <axis>
+      <x> 0.0 </x>
+      <y> 0.0 </y>
+      <z> 1.0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rudder-trim</object-name>
+    <property>controls/flight/rudder-trim</property>
+    <interpolation>
+      <entry><ind> -0.2 </ind><dep> -10.0 </dep></entry>
+      <entry><ind>  0.0 </ind><dep>   0.0 </dep></entry>
+      <entry><ind>  0.2 </ind><dep>  10.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 4.600 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.800 </z-m>
+    </center>
+    <axis>
+      <x> 0.0 </x>
+      <y> 0.0 </y>
+      <z> 1.0 </z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>eleron-rh-upr</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1.0 </ind><dep> -19.0 </dep></entry>
+      <entry><ind>  0.0 </ind><dep>   0.0 </dep></entry>
+      <entry><ind>  1.0 </ind><dep>  19.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.043 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 1.036 </z-m>
+    </center>
+    <axis>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>eleron-rh-lwr</object-name>
+    <object-name>eleron-link-rh</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1.0 </ind><dep> -11 </dep></entry>
+      <entry><ind>  0.0 </ind><dep>   0.0 </dep></entry>
+      <entry><ind>  1.0 </ind><dep>  11 </dep></entry>
+    </interpolation>
+     <center>
+      <x-m> 0.813 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m>-0.423 </z-m>
+    </center>
+    <axis>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>eleron-lh-upr</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1.0 </ind><dep> -19.0 </dep></entry>
+      <entry><ind>  0.0 </ind><dep>   0.0 </dep></entry>
+      <entry><ind>  1.0 </ind><dep>  19.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.043 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 1.036 </z-m>
+    </center>
+    <axis>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>eleron-lh-lwr</object-name>
+    <object-name>eleron-link-lh</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1.0 </ind><dep> -11 </dep></entry>
+      <entry><ind>  0.0 </ind><dep>   0.0 </dep></entry>
+      <entry><ind>  1.0 </ind><dep>  11 </dep></entry>
+    </interpolation>
+     <center>
+      <x-m> 0.813 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m>-0.423 </z-m>
+    </center>
+    <axis>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>eleron-link-rh</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1.0 </ind><dep>  11 </dep></entry>
+      <entry><ind>  0.0 </ind><dep>   0.0 </dep></entry>
+      <entry><ind>  1.0 </ind><dep> -11 </dep></entry>
+    </interpolation>
+     <center>
+      <x-m> 1.148 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m>-0.473 </z-m>
+    </center>
+    <axis>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>eleron-link-lh</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1.0 </ind><dep> -11 </dep></entry>
+      <entry><ind>  0.0 </ind><dep>   0.0 </dep></entry>
+      <entry><ind>  1.0 </ind><dep>  11 </dep></entry>
+    </interpolation>
+     <center>
+      <x-m> 1.148 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m>-0.473 </z-m>
+    </center>
+    <axis>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
+    </axis>
+  </animation>
+
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>water-rudder-RH</object-name>
+    <object-name>water-rudder-RH1</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1.00 </ind><dep>  30.0 </dep></entry>
+      <entry><ind>  0.00 </ind><dep>   0.0 </dep></entry>
+      <entry><ind>  1.00 </ind><dep> -30.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 3.000 </x-m>
+      <y-m> 1.235 </y-m>
+      <z-m> -1.50 </z-m>
+    </center>
+    <axis>
+      <x> 0.0 </x>
+      <y> 0.0 </y>
+      <z> 1.0 </z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>water-rudder-LH</object-name>
+    <object-name>water-rudder-LH1</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1.00 </ind><dep>  30.0 </dep></entry>
+      <entry><ind>  0.00 </ind><dep>   0.0 </dep></entry>
+      <entry><ind>  1.00 </ind><dep> -30.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 3.000 </x-m>
+      <y-m> -1.235 </y-m>
+      <z-m> -1.50 </z-m>
+    </center>
+    <axis>
+      <x> 0.0 </x>
+      <y> 0.0 </y>
+      <z> 1.0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>water-rudder-LH1</object-name>
+    <object-name>water-rudder-RH1</object-name>
+    <property>controls/gear/brake-parking</property>
+    <interpolation>
+      <entry><ind>  1.00 </ind><dep>  -90.0 </dep></entry>
+      <entry><ind>  0.00 </ind><dep>  0.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 3.3 </x-m>
+      <y-m> -1.235 </y-m>
+      <z-m> -1.7 </z-m>
+    </center>
+    <axis>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
+    </axis>
+  </animation>
+
+  <!-- LIGHTING -->
+  <model>
+    <name>Red</name>
+    <path>Aircraft/YMF-5DF/Models/light/RedLight.xml</path>
+    <offsets>
+      <x-m> -0.7 </x-m>
+      <y-m> -4.6 </y-m>
+      <z-m>  1.15</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Green</name>
+    <path>Aircraft/YMF-5DF/Models/light/GreenLight.xml</path>
+    <offsets>
+      <x-m> -0.7 </x-m>
+      <y-m>  4.6 </y-m>
+      <z-m>  1.15</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Strobe0</name>
+    <path>Aircraft/YMF-5DF/Models/light/StrobeWhite.xml</path>
+    <offsets>
+      <x-m> -0.65 </x-m>
+      <y-m> -4.6 </y-m>
+      <z-m>  1.15</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Strobe1</name>
+    <path>Aircraft/YMF-5DF/Models/light/StrobeWhite.xml</path>
+    <offsets>
+      <x-m> -0.65 </x-m>
+      <y-m>  4.6 </y-m>
+      <z-m>  1.15</z-m>
+    </offsets>
+  </model>
+
+  <model>
+  <name>Tail-Light</name>
+    <path>Aircraft/YMF-5DF/Models/light/TailLight.xml</path>
+    <offsets>
+      <x-m> 4.1</x-m>
+      <y-m>  0 </y-m>
+      <z-m> 0.06 </z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>Tail-Light</object-name>
+    <condition>
+          <property>controls/lighting/nav-lights</property>
+    </condition>
+  </animation> 
+
+  <model>
+    <name>anti-collusion</name>
+    <path>Aircraft/YMF-5DF/Models/light/anti-collusion.xml</path>
+    <offsets>
+      <x-m> -1.35 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m>  -0.55</z-m>
+    </offsets>
+  </model>
+
+  <!-- Wing light cone -->
+  <model>
+    <name>Landing-Light-Left</name>
+    <path>Aircraft/YMF-5DF/Models/light/light-cone.xml</path>
+    <offsets>
+      <x-m>  -0.4 </x-m>
+      <y-m>  -2.4 </y-m>
+      <z-m>  -0.35 </z-m>
+      <pitch-deg> -10.00 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Landing-Light-Right</name>
+    <path>Aircraft/YMF-5DF/Models/light/light-cone.xml</path>
+    <offsets>
+      <x-m>  -0.4 </x-m>
+      <y-m>   2.4 </y-m>
+      <z-m>  -0.35 </z-m>
+      <pitch-deg> -10.00 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <name>AllWingLight</name>
+    <object-name>Landing-Light-Left</object-name>
+    <object-name>Landing-Light-Right</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>AllWingLight</object-name>
+    <condition>
+        <equals>
+          <property>controls/switches/landing-light</property>
+          <value> 1 </value>
+        </equals>
+    </condition>
+  </animation> 
+
+<!-- Wing light cone--> 
+  <model>
+    <name>LandingLight-Left</name>
+   <path>Aircraft/YMF-5DF/Models/light/Landinglight.xml</path>
+    <offsets>
+      <x-m>  -0.4 </x-m>
+      <y-m>  -2.25 </y-m>
+      <z-m>  -0.39 </z-m>
+      <pitch-deg> -10.00 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>LandingLight-Right</name>
+    <path>Aircraft/YMF-5DF/Models/light/Landinglight.xml</path>
+    <offsets>
+      <x-m>  -0.4 </x-m>
+      <y-m>   2.25 </y-m>
+      <z-m>  -0.39 </z-m>
+      <pitch-deg> -10.00 </pitch-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <name>WingLight</name>
+    <object-name>LandingLight-Left</object-name>
+    <object-name>LandingLight-Right</object-name>
+  </animation>
+
+
+  <animation>
+    <type>select</type>
+    <object-name>WingLight</object-name>
+    <condition>
+        <equals>
+          <property>controls/switches/landing-light</property>
+          <value> 1 </value>
+        </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>prop-low</object-name>
+    <object-name>prop-high</object-name>
+    <nopreview/>
+  </animation>
+
+  <model>
+    <name>TRAIL</name>
+    <path>Aircraft/YMF-5DF/Models/effects/trail/trailR.xml</path>
+    <offsets>
+      <x-m>  -1.5 </x-m>
+      <y-m>   0 </y-m>
+      <z-m>  -0.8 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>SmokeR</name>
+    <path>Aircraft/YMF-5DF/Models/effects/smoke/smokeR.xml</path>
+    <offsets>
+      <x-m>  -1.8 </x-m>
+      <y-m>   0.2 </y-m>
+      <z-m>  -0.7 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>SmokeL</name>
+    <path>Aircraft/YMF-5DF/Models/effects/smoke/smokeR.xml</path>
+    <offsets>
+      <x-m>  -1.8 </x-m>
+      <y-m>  -0.2 </y-m>
+      <z-m>  -0.7 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>SplashR</name>
+    <path>Aircraft/YMF-5DF/Models/effects/splash/right-splash.xml</path>
+    <offsets>
+      <x-m>  -1.5 </x-m>
+      <y-m>   1.5 </y-m>
+      <z-m>  -2.5 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>SplashL</name>
+    <path>Aircraft/YMF-5DF/Models/effects/splash/left-splash.xml</path>
+    <offsets>
+      <x-m>  -1.5 </x-m>
+      <y-m>  -1.5 </y-m>
+      <z-m>  -2.5 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
+
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList include="YMF-5DF-yasim-cnf.xml">
+
+  <sim>
+    <description>YMF-5DF (YASim)</description>
+    <status>Ver.1.1</status>
+    <author>Hitoshi Uchida(3D/FDM)</author>
+  </sim>
+
+</PropertyList>
+
+
+

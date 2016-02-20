@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList include="YMF-5DF-base.xml">
+
+  <sim>
+
+    <description>YMF-5DF (YASim)</description>
+    <author>Hitoshi Uchida (3D/FDM)</author>
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">YMF-5DF-yasim</aero>
+
+  </sim>
+
+</PropertyList>
+
+

@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<PropertyList>
+
+  <fx>
+ 
+    <crank>
+      <name>engstart</name>
+      <mode>looped</mode>
+      <path>Aircraft/YMF-5DF/Sounds/cranking.wav</path>
+      <condition>
+          <property>/engines/engine/cranking</property>
+      </condition>
+      <volume>
+        <offset>0.4</offset>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </crank>
+
+
+    <crank>
+      <name>cough</name>
+      <path>Aircraft/YMF-5DF/Sounds/p51d_startup.wav</path>
+      <property>/engines/engine/running</property>
+      <volume>
+        <offset>0.6</offset>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </crank>
+
+    <stopext>
+      <name>stopext</name>
+      <path>Aircraft/YMF-5DF/Sounds/coughing.wav</path>
+      <condition>
+        <not>
+          <property>/engines/engine/running</property>
+        </not>
+      </condition>
+      <volume>
+        <offset>0.3</offset>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </stopext>
+
+    <engine>
+      <name>engine-in</name>
+      <mode>looped</mode>
+      <path>Aircraft/YMF-5DF/Sounds/engine_run.wav</path>
+     <condition>
+         <and>
+          <property>/engines/engine/running</property>
+          <property>/sim/current-view/internal</property>
+         </and>
+      </condition>
+      <volume>
+        <property>engines/engine/rpm</property>
+        <factor>0.01</factor>
+        <min>0.5</min>
+        <max>0.8</max>
+      </volume>
+      <pitch>
+        <property>/engines/engine/rpm</property>
+        <factor>0.001</factor>
+        <min>0.15</min>
+        <max>2.2</max>
+        <offset>-0.0</offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+
+
+    <engine>
+      <name>engine-out</name>
+      <mode>looped</mode>
+      <path>Aircraft/YMF-5DF/Sounds/engine_run.wav</path>
+     <condition>
+         <and>
+          <property>/engines/engine/running</property>
+          <not>
+          <property>/sim/current-view/internal</property>
+          </not>
+         </and>
+      </condition>
+      <volume>
+        <property>engines/engine/rpm</property>
+        <factor>0.01</factor>
+        <min>0.1</min>
+        <max>0.3</max>
+      </volume>
+      <pitch>
+        <property>/engines/engine/rpm</property>
+        <factor>0.001</factor>
+        <min>0.15</min>
+        <max>2.2</max>
+        <offset>-0.0</offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+
+   <prop>
+      <name>prop</name>
+      <mode>looped</mode>
+      <path>Aircraft/YMF-5DF/Sounds/wasp.wav</path>
+      <condition>
+         <and>
+          <property>/engines/engine/running</property>
+          <not>
+          <property>/sim/current-view/internal</property>
+          </not>
+         </and>
+      </condition>
+      <volume>
+        <property>engines/engine/mp-osi</property>
+        <factor>0.1</factor>
+        <min>0.5</min>
+        <max>2.0</max>
+      </volume>
+      <pitch>
+        <property>/engines/engine/rpm</property>
+        <factor>0.001</factor>
+        <min>0.1</min>
+        <max>1.5</max>
+        <offset>-0.0</offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </prop>
+
+    <wind>
+      <name>wind-prop</name>
+      <mode>looped</mode>
+      <path>Sounds/wind-8khz.wav</path>
+      <condition>
+         <and>
+          <property>/engines/engine/running</property>
+          <property>/sim/current-view/internal</property>
+         </and>
+      </condition>
+      <property>/velocities/airspeed-kt</property>
+      <volume>
+        <property>engines/engine/mp-osi</property>
+        <factor>0.1</factor>
+        <min>0.1</min>
+        <max>1.0</max>
+      </volume>
+      <pitch>
+        <property>/engines/engine/rpm</property>
+        <factor>0.0005</factor>
+        <min>0.1</min>
+        <max>1.0</max>
+        <offset>-0.0</offset>
+      </pitch>
+    </wind>
+
+    <wind>
+      <name>wind-air</name>
+      <mode>looped</mode>
+      <path>Sounds/wind.wav</path>
+      <condition>
+          <property>/sim/current-view/internal</property>
+      </condition>
+      <property>/velocities/airspeed-kt</property>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.005</factor>
+        <min>0.0</min>
+        <max>1.0</max>
+      </volume>
+    </wind>
+
+    <rumble>
+      <name>rumble</name>
+      <mode>looped</mode>
+      <path>Aircraft/YMF-5DF/Sounds/rumble.wav</path>
+      <condition>
+        <or>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
+          <property>/gear/gear[3]/wow</property>
+          <property>/gear/gear[4]/wow</property>
+          <property>/gear/gear[5]/wow</property>
+          <property>/gear/gear[6]/wow</property>
+          <property>/gear/gear[7]/wow</property>
+          <property>/gear/gear[8]/wow</property>
+          <property>/gear/gear[9]/wow</property>
+          <property>/gear/gear[10]/wow</property>
+        </or>
+      </condition>
+      <volume>
+        <property>/velocities/groundspeed-kt</property>
+        <!--type>log</type-->
+        <factor>0.025</factor>
+        <offset> -0.01</offset>
+        <max>1.01</max>
+        <min>0.01</min>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </rumble>
+
+    <squeal>
+      <name>squeal</name>
+      <path>Aircraft/YMF-5DF/Sounds/wow.wav</path>
+      <condition>
+        <or>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
+          <property>/gear/gear[3]/wow</property>
+          <property>/gear/gear[4]/wow</property>
+          <property>/gear/gear[5]/wow</property>
+          <property>/gear/gear[6]/wow</property>
+          <property>/gear/gear[7]/wow</property>
+          <property>/gear/gear[8]/wow</property>
+          <property>/gear/gear[9]/wow</property>
+          <property>/gear/gear[10]/wow</property>
+        </or>
+      </condition>
+      <volume>
+        <property>/velocities/speed-down-fps</property>
+        <factor>0.5</factor>
+        <max>1.0</max>
+      </volume>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.1</factor>
+        <max>1.0</max>
+      </volume>
+      <volume>
+        <internal>dt_stop</internal>
+        <factor>0.05</factor>
+        <max>1.0</max>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </squeal>
+
+    <rumble>
+      <name>wave</name>
+      <mode>looped</mode>
+      <path>Sounds/wave.wav</path>
+      <condition>
+       <and>
+        <or>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
+          <property>/gear/gear[3]/wow</property>
+          <property>/gear/gear[4]/wow</property>
+          <property>/gear/gear[5]/wow</property>
+          <property>/gear/gear[6]/wow</property>
+          <property>/gear/gear[7]/wow</property>
+          <property>/gear/gear[8]/wow</property>
+          <property>/gear/gear[9]/wow</property>
+          <property>/gear/gear[10]/wow</property>
+        </or>
+        <not>
+        <property>/gear/gear[10]/ground-is-solid</property>
+        </not>
+       </and>
+      </condition>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <type>log</type>
+        <factor>0.3</factor>
+      </volume>
+    </rumble>
+
+    <squeal>
+      <name>water</name>
+      <path>Sounds/wave.wav</path>
+      <condition>
+       <and>
+        <or>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
+          <property>/gear/gear[3]/wow</property>
+          <property>/gear/gear[4]/wow</property>
+          <property>/gear/gear[5]/wow</property>
+          <property>/gear/gear[6]/wow</property>
+          <property>/gear/gear[7]/wow</property>
+          <property>/gear/gear[8]/wow</property>
+          <property>/gear/gear[9]/wow</property>
+          <property>/gear/gear[10]/wow</property>
+        </or>
+        <not>
+        <property>/gear/gear[10]/ground-is-solid</property>
+        </not>
+       </and>
+      </condition>
+      <volume>
+        <property>/velocities/speed-down-fps</property>
+        <factor>0.7</factor>
+        <max>1.0</max>
+      </volume>
+    </squeal>
+
+
+    <!--                  Toggle Switches                  -->     
+    <click> 
+      <name>Battery on</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <property>controls/electric/battery-switch</property>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>Battery off</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <not> 
+          <property>controls/electric/battery-switch</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>Fuel Pump on</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <property>controls/engines/engine/fuel-pump</property>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>Fuel Pump off</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <not> 
+          <property>controls/engines/engine/fuel-pump</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+ 
+    <click>
+      <name>Landing Light On</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <property>controls/switches/landing-light</property>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+      
+    <click>
+      <name>Landing Light Off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/switches/landing-light</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>Magnetos-off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/engines/engine/magnetos</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>Strobe Lights White</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <equals>
+          <property>controls/switches/strobes</property>
+          <value>1</value>
+        </equals>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>Strobe Lights Off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not> 
+          <property>controls/switches/strobes</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>Avionics Master On</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <property>controls/switches/avionic-master</property>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+ 
+    <click> 
+      <name>Avionics Master Off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/switches/avionic-master</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <!--                  Toggle Switches                  -->     
+    <click> 
+      <name>click on</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <property>sim/sound/click</property>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>click off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>sim/sound/click</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+
+  </fx>
+
+</PropertyList>
+
+
+
+

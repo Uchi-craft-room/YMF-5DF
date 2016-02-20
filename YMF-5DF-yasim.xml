@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  YMF-5DF - 2014 - Hitoshi Uchida
+
+  Wingspan     :  9.14 m    ( ft )
+  lenght       :  7.26 m    ( ft )
+  height       :  2.59 m    ( ft )
+  Empty mass   :   900 kg   (1984 lb )
+  Engine       :   275 hp(2200rpm) Weight:400lb
+  Cruise speed : 193.1 km/h ( 104 kt )
+  Max speed    : 344.4 km/h ( 186 kt )
+-->
+
+<airplane mass="1984">
+
+  <approach speed="80" aoa="2" fuel="1.0">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+  </approach>
+
+  <cruise speed="160" alt="3000" fuel="1.0">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+  </cruise>
+
+  <cockpit x="0.8" y="0" z="0.7"/>
+
+  <fuselage ax="2.25" ay="0" az="0.0" bx="-4.0" by="0" bz="0.3" width="1.2" taper="0.1" midpoint="0.1" idrag="5"/>
+
+  <wing x="0.6" y="0.0" z="1.0" taper="1.0" length="4.0" chord="1.5"  camber="0.1" sweep="0" incidence="0" idrag="1.5">
+        <stall aoa="15" width="2.5" peak="1.25"/>
+        <flap1 start="0.7" end="1.0" lift="1.2" drag="1.2"/>
+        <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
+        <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+        <control-speed control="FLAP1" transition-time="0.01"/>
+  </wing>
+
+  <wing x="-0.3" y="0.5" z="-0.5" taper="1.0" length="3.5" chord="1.5" camber="0.1" sweep="0" incidence="0" idrag="1.5"> 
+        <stall aoa="15" width="2.5" peak="1.25"/>
+        <flap1 start="0.7" end="1.0" lift="1.2" drag="1.2"/>
+        <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/> 
+        <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+        <control-speed control="FLAP1" transition-time="0.01"/>
+  </wing>
+
+  <hstab x="-3.8" y="0.05" z="0.5" chord="1.5" length="1.6" taper="0.5" sweep="0">
+         <stall aoa="12" width="4.0" peak="1.5"/>
+         <flap0 start="0.0" end="1.0" lift="1.5" drag="1.3"/>
+         <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+         <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+         <control-output control="FLAP0" prop="/surface-positions/elevator-trim-pos-norm"/>
+  </hstab>
+
+  <vstab x="-3.7" y="0" z="-0.5" chord="2.0" length="2.0" taper="0.5" sweep="0" effectiveness="2.0">
+       <stall aoa="12" width="4" peak="2.0"/>
+       <flap0 start="0.0" end="1.0" lift="1.5" drag="1.3"/>
+       <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+       <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+       <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
+       <control-output control="FLAP0" prop="/surface-positions/rudder-trim-pos-norm"/>
+  </vstab>
+
+  <propeller x="1.9" y="0.0" z="0.0" mass="500" radius="1.16" moment="10"
+             cruise-speed="186" cruise-rpm="2200" cruise-alt="2000" cruise-power="275"
+             takeoff-power="275" takeoff-rpm="2200">
+             <piston-engine eng-rpm="2200" alt="2000" eng-power="300"/>
+             <actionpt x="2.3" y="0" z="0.0" />
+             <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+             <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
+             <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
+             <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
+  </propeller>
+
+
+<!-- CARRIER -->
+
+  <gear x="3.0" y="1.8" z="-2.5" compression="0.1" spring="0.8" sfric = "0.5" dfric="0.4">
+        <control-input axis="/controls/gear/brake-left" control="BRAKE" split="true"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-speed control="EXTEND" transition-time="2"/>
+        <control-output control="EXTEND" prop="gear/gear/position-norm"/>
+  </gear>
+
+  <gear x="3.0" y="-1.8" z="-2.5" compression="0.1" spring="0.8" sfric = "0.5" dfric="0.4">
+        <control-input axis="/controls/gear/brake-right" control="BRAKE" split="true"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-speed control="EXTEND" transition-time="2"/>
+  </gear>
+
+  <gear x="-3" y="1.8" z="-2.5" compression="0.1" spring="0.8" sfric = "0.5" dfric="0.4">
+        <control-input axis="/controls/flight/rudder" control="STEER" square="true" src0="-1.0" src1="1.0" dst0="1.0" dst1="-1.0"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-speed control="EXTEND" transition-time="2"/>
+   </gear>
+
+  <gear x="-3" y="-1.8" z="-2.5" compression="0.1" spring="0.8" sfric = "0.5" dfric="0.4">
+        <control-input axis="/controls/flight/rudder" control="STEER" square="true" src0="-1.0" src1="1.0" dst0="1.0" dst1="-1.0"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-speed control="EXTEND" transition-time="2"/>
+   </gear>
+
+<!--  FLOATS -->
+
+  <gear x="-0.3" y="1.5" z="-2.2"  sfric="0.85" dfric="0.7" on-water="1" on-solid="1" ignore-by-solver="1" reduce-friction-by-extension="1.3" speed-planing="200" spring-factor-not-planing="3">
+  </gear>
+
+  <gear x="-0.3" y="-1.5" z="-2.2" sfric="0.85" dfric="0.7" on-water="1" on-solid="1" ignore-by-solver="1"  reduce-friction-by-extension="1.3" speed-planing="200" spring-factor-not-planing="3">
+  </gear>
+
+
+  <gear x="-2.0" y="1.5" z="-1.8"  sfric="0.85" dfric="0.7" on-water="1" on-solid="1" ignore-by-solver="1"  reduce-friction-by-extension="1.15" speed-planing="5" spring-factor-not-planing="2.8">
+        <control-input axis="/controls/flight/rudder" control="STEER" src0="-1.0" src1="1.0" dst0="1" dst1="-1"/>
+  </gear>
+
+  <gear x="-2.0" y="-1.5" z="-1.8"  sfric="0.85" dfric="0.7" on-water="1" on-solid="1"  ignore-by-solver="1" reduce-friction-by-extension="1.15" speed-planing="5" spring-factor-not-planing="2.8">
+        <control-input axis="/controls/flight/rudder" control="STEER" src0="-1.0" src1="1.0" dst0="1" dst1="-1"/>
+  </gear>
+
+  <gear x="2" y="1.5" z="-2.2"  sfric="0.85" dfric="0.8" on-water="1" on-solid="1"  ignore-by-solver="1"  reduce-friction-by-extension="1.3" speed-planing="200" spring-factor-not-planing="3.5">
+  </gear>
+
+  <gear x="2" y="-1.5" z="-2.2" sfric="0.85" dfric="0.8" on-water="1" on-solid="1"  ignore-by-solver="1" reduce-friction-by-extension="1.3" speed-planing="200" spring-factor-not-planing="3.5">
+  </gear>
+
+<!-- The FLOATS ON GROUND-->
+
+    <gear x="1.0" y="1.5" z="-2.3" compression="0.4" spring = "10" sfric = "1" dfric = "0.9" skid="1" ignored-by-solver="1" reduce-friction-by-extension="1.2" speed-planing="200">
+    </gear>
+
+    <gear x="1.0" y="-1.5" z="-2.3" compression="0.4" spring = "10" sfric = "1" dfric = "0.9" skid="1" ignored-by-solver="1" reduce-friction-by-extension="1.2" speed-planing="200">
+    </gear>
+
+    <gear x="-1.0" y="1.5" z="-2.3" compression="0.2" spring = "10" sfric = "1" dfric = "0.9" skid="1" ignored-by-solver="1" reduce-friction-by-extension="1.2" speed-planing="200">
+    </gear>
+
+    <gear x="-1.0" y="-1.5" z="-2.3" compression="0.2" spring = "10" sfric = "1" dfric = "0.9" skid="1" ignored-by-solver="1" reduce-friction-by-extension="1.2" speed-planing="200">
+    </gear>
+
+
+<!-- Retractable wheels on water-->
+    <gear x="-3.0" y="1.5" z="-1.8" compression="0.2" spring = "0.1" sfric = "0.1" dfric="0.05" retract-time="2" on-water="1" on-solid="0" ignored-by-solver="1" reduce-friction-by-extension="1.2" speed-planing="200">
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-speed control="EXTEND" transition-time="2"/>
+    </gear>
+
+    <gear x="-3.0" y="-1.5" z="-1.8" compression="0.2" spring = "0.1" sfric = "0.1" dfric ="0.05" retract-time="2" on-water="1" on-solid="0" ignored-by-solver="1" reduce-friction-by-extension="1.2" speed-planing="200">
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-speed control="EXTEND" transition-time="2"/>v
+    </gear>
+
+  <tank x="0.6" y="0.5" z="1.0" capacity="144.2" />
+  <tank x="0.6" y="-0.5" z="1.0" capacity="144.2" />
+  <tank x="0.6" y="1.3" z="1.0" capacity="72" />
+  <tank x="0.6" y="-1.3" z="1.0" capacity="72" />
+
+  <ballast x="-0.8" y="0" z="0.2" mass="130"/>
+  <ballast x="0.8" y="0" z="0.2" mass="130"/>
+  <ballast x="0.8" y="-1.5" z="-1.7" mass="60"/>
+  <ballast x="0.8" y="1.5" z="-1.7" mass="60"/>
+
+ <thruster x="-2.00"  y="0.00" z="-2.0" vx="0" vy="1" vz="0" thrust="200">
+ <control-input axis="/controls/flight/rudder" control="STEER" src0="-1" src1="1" dst0="-1" dst1="1"/>
+ </thruster>
+
+ <thruster x="2.00"  y="0.00" z="-2.0" vx="1" vy="0" vz="0" thrust="200">
+ <control-input axis="/sim/model/pushback/target-speed-fps" control="THROTTLE" src0="-1" src1="1" dst0="-1" dst1="1"/>
+ </thruster>
+
+</airplane>
+

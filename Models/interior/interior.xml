@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/ai/adi.xml</path>
+	<offsets>
+		<x-m> 0.190 </x-m>
+		<y-m> 0.000 </y-m>
+		<z-m> 0.540 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/alt/alt.xml</path>
+	<offsets>
+		<x-m> 0.190 </x-m>
+		<y-m> 0.100 </y-m>
+		<z-m> 0.540 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/asi/asi.xml</path>
+	<offsets>
+		<x-m> 0.194 </x-m>
+		<y-m> -0.100 </y-m>
+		<z-m> 0.540 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/hi/hi.xml</path>
+	<offsets>
+		<x-m> 0.195 </x-m>
+		<y-m> 0.000 </y-m>
+		<z-m> 0.440 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/vsi/vsi.xml</path>
+	<offsets>
+		<x-m> 0.190 </x-m>
+		<y-m> 0.100 </y-m>
+		<z-m> 0.440 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/tc/tc.xml</path>
+	<offsets>
+		<x-m> 0.194 </x-m>
+		<y-m> -0.100 </y-m>
+		<z-m> 0.440 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/M877/M877.xml</path>
+	<offsets>
+		<x-m> 0.190 </x-m>
+		<y-m> -0.100 </y-m>
+		<z-m> 0.340 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/vor/vor.xml</path>
+	<offsets>
+		<x-m> 0.194 </x-m>
+		<y-m> 0.000 </y-m>
+		<z-m> 0.340 </z-m>
+	</offsets>
+</model>
+
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/kt70/kt70.xml</path>
+	<offsets>
+		<x-m> 0.188 </x-m>
+		<y-m> 0.230 </y-m>
+		<z-m> 0.320 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/kx165/kx165-1.xml</path>
+	<offsets>
+		<x-m> 0.180 </x-m>
+		<y-m> -0.230 </y-m>
+		<z-m> 0.320 </z-m>
+	</offsets>
+</model>
+
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/kma20/kma20.xml</path>
+	<offsets>
+		<x-m> 0.183 </x-m>
+		<y-m> -0.230 </y-m>
+		<z-m> 0.450 </z-m>
+	</offsets>
+</model>
+
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/kns80/kns80.xml</path>
+	<offsets>
+		<x-m> 0.192 </x-m>
+		<y-m> -0.230 </y-m>
+		<z-m> 0.390 </z-m>
+	</offsets>
+</model>
+
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/tach/tach.xml</path>
+	<offsets>
+		<x-m> 0.194 </x-m>
+		<y-m> 0.100 </y-m>
+		<z-m> 0.340 </z-m>
+	</offsets>
+</model>
+
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/BatteryGauge/BatteryGauge.xml</path>
+	<offsets>
+		<x-m> 0.197 </x-m>
+		<y-m> 0.190 </y-m>
+		<z-m> 0.540 </z-m>
+	</offsets>
+</model>
+
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/FuelGauge/FuelGauge.xml</path>
+	<offsets>
+		<x-m> 0.200 </x-m>
+		<y-m> -0.190 </y-m>
+		<z-m> 0.540 </z-m>
+	</offsets>
+</model>
+
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/dg/dg.xml</path>
+	<offsets>
+		<x-m> 0.060 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0.905 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/mirror/mirror.xml</path>
+	<offsets>
+		<x-m> -0.285 </x-m>
+		<y-m> 0.759 </y-m>
+		<z-m> 0.750 </z-m>
+                <pitch-deg> 10 </pitch-deg>
+                <roll-deg> -32 </roll-deg>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/mirror/mirror.xml</path>
+	<offsets>
+		<x-m> -0.290 </x-m>
+		<y-m> -0.750 </y-m>
+		<z-m> 0.735 </z-m>
+                <pitch-deg> 10 </pitch-deg>
+                <roll-deg> 32 </roll-deg>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/switches/master.xml</path>
+	<offsets>
+		<x-m> 0.190 </x-m>
+		<y-m> 0.170 </y-m>
+		<z-m> 0.460 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/switches/ignition.xml</path>
+	<offsets>
+		<x-m> 0.190 </x-m>
+		<y-m> 0.200 </y-m>
+		<z-m> 0.460 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/switches/starter.xml</path>
+	<offsets>
+		<x-m> 0.190 </x-m>
+		<y-m> 0.230 </y-m>
+		<z-m> 0.460 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/switches/gen.xml</path>
+	<offsets>
+		<x-m> 0.190 </x-m>
+		<y-m> 0.260 </y-m>
+		<z-m> 0.460 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/switches/lights.xml</path>
+	<offsets>
+		<x-m> 0.190 </x-m>
+		<y-m> 0.260 </y-m>
+		<z-m> 0.390 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/switches/nav-lights.xml</path>
+	<offsets>
+		<x-m> 0.190 </x-m>
+		<y-m> 0.230 </y-m>
+		<z-m> 0.390 </z-m>
+	</offsets>
+</model>
+
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/switches/beacon-lights.xml</path>
+	<offsets>
+		<x-m> 0.190 </x-m>
+		<y-m> 0.200 </y-m>
+		<z-m> 0.390 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/switches/landing-lights.xml</path>
+	<offsets>
+		<x-m> 0.190 </x-m>
+		<y-m> 0.170 </y-m>
+		<z-m> 0.390 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/power_lever/power_lever.xml</path>
+	<offsets>
+		<x-m> 0.350 </x-m>
+		<y-m> -0.380 </y-m>
+		<z-m> 0.090 </z-m>
+	</offsets>
+</model>
+
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/friction-knob/friction-knob.xml</path>
+	<offsets>
+		<x-m> 0.352 </x-m>
+		<y-m> -0.337 </y-m>
+		<z-m> 0.150 </z-m>
+                <pitch-deg> 180 </pitch-deg>
+                <roll-deg> 90 </roll-deg>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/parking-brake/brake-knob.xml</path>
+	<offsets>
+		<x-m> 0.190 </x-m>
+		<y-m> -0.300 </y-m>
+		<z-m> 0.190 </z-m>
+                <pitch-deg> 0</pitch-deg>
+                <roll-deg> 0</roll-deg>
+	</offsets>
+</model>
+
+<!--  ########################  co-pilot_seat ######################  -->
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/alt/alt.xml</path>
+	<offsets>
+		<x-m> -0.935 </x-m>
+		<y-m> 0.100 </y-m>
+		<z-m> 0.450 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/asi/asi.xml</path>
+	<offsets>
+		<x-m> -0.935 </x-m>
+		<y-m> -0.100 </y-m>
+		<z-m> 0.450 </z-m>
+	</offsets>
+</model>
+
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/hi/hi.xml</path>
+	<offsets>
+		<x-m> -0.930 </x-m>
+		<y-m> -0 </y-m>
+		<z-m> 0.450 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/YMF-5DF/Models/interior/Instruments/M877/M877.xml</path>
+	<offsets>
+		<x-m> -0.935 </x-m>
+		<y-m> -0.190 </y-m>
+		<z-m> 0.450 </z-m>
+	</offsets>
+</model>
+
+
+</PropertyList>
+
+

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <particlesystem>
+    <name>TRAIL-RH</name>
+    <texture>trail.png</texture>
+
+    <emissive>false</emissive>
+    <lighting>false</lighting>
+
+   <condition>
+     <and>
+       <greater-than>
+       <property>/controls/flight/spoilers</property>
+       <value>0</value>
+       </greater-than>
+      <property>/engines/engine/running</property>
+     </and>
+   </condition>
+
+    <attach>world</attach>
+
+    <placer>
+      <type>point</type>
+    </placer>
+
+    <shooter>
+      <theta-min-deg>80</theta-min-deg>
+      <theta-max-deg>85</theta-max-deg>
+      <phi-min-deg>-1.5</phi-min-deg>
+      <phi-max-deg>1.5</phi-max-deg>
+      <speed-mps>
+        <property>engines/engine/n1</property>
+        <factor>5</factor>
+      </speed-mps>
+      <rotation-speed>
+        <x-min-deg-sec>10</x-min-deg-sec>
+        <y-min-deg-sec>0</y-min-deg-sec>
+        <z-min-deg-sec>0</z-min-deg-sec>
+        <x-max-deg-sec>30</x-max-deg-sec>
+        <y-max-deg-sec>0</y-max-deg-sec>
+        <z-max-deg-sec>0</z-max-deg-sec>
+      </rotation-speed>
+    </shooter>
+
+    <counter>
+      <particles-per-sec>
+        <value>50</value>
+      </particles-per-sec>
+    </counter>
+
+    <align>billboard</align>
+
+    <particle>
+      <start>
+        <color>
+          <red><value>   1 </value></red>
+          <green><value> 1 </value></green>
+          <blue><value>  1 </value></blue>
+          <alpha><value> 0.5 </value></alpha>
+        </color>
+        <size>
+          <value>0.7</value>
+        </size>
+      </start>
+
+      <end>
+        <color>
+          <red><value>   0.90 </value></red>
+          <green><value> 0.90 </value></green>
+          <blue><value>  0.90 </value></blue>
+          <alpha><value> 0.0001 </value></alpha>
+        </color>
+        <size>
+          <value>30</value>
+        </size>
+      </end>
+
+      <life-sec>
+        <value>60</value>
+      </life-sec>
+
+      <mass-kg>10</mass-kg>
+      <radius-m>10</radius-m>
+    </particle>
+
+    <program>
+      <fluid>   air  </fluid>
+      <gravity> true </gravity>
+      <wind>    true </wind>
+    </program>
+
+  </particlesystem>
+
+</PropertyList>

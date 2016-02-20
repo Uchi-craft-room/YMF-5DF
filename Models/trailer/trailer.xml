@@ -1,0 +1,50 @@
+<PropertyList>
+
+  <path>trailer.ac</path>
+
+  <animation>
+    <type>spin</type>
+    <object-name>tire-fr</object-name>
+    <property>velocities/uBody-fps</property>
+    <factor>-4.973</factor>
+    <center>
+      <x-m>0.260</x-m>
+      <y-m>0</y-m>
+      <z-m>0.203</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>spin</type>
+    <object-name>tire-rr</object-name>
+    <property>velocities/uBody-fps</property>
+    <factor>-4.973</factor>
+    <center>
+      <x-m>4.739</x-m>
+      <y-m>0</y-m>
+      <z-m>0.198</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <condition>
+      <equals>
+      <property>gear/gear[0]/position-norm</property>
+      <value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+ 
+</PropertyList>
