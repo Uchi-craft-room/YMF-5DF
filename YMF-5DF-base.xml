@@ -5,7 +5,6 @@
   <sim include="Nasal/views.xml">
 
     <aircraft-version>1.2</aircraft-version>
-    <status>Alpha</status>
 
     <fuel-fraction>1.0</fuel-fraction>
 
@@ -48,12 +47,19 @@
     <multiplay>
       <chat_display>1</chat_display>
       <generic>
-        <int type="int" n="0">0</int>
-        <int type="int" n="1">0</int>
-        <int type="int" n="2">0</int>
-        <int type="int" n="3">0</int>
-        <int type="int" n="4">0</int>
-        <int type="int" n="5">0</int>
+        <int type="int">0</int>  <!-- 0 immat -->
+        <int type="int">0</int>  <!-- 1 immat -->
+        <int type="int">0</int>  <!-- 2 immat -->
+        <int type="int">0</int>  <!-- 3 immat -->
+        <int type="int">0</int>  <!-- 4 immat -->
+        <int type="int">0</int>  <!-- 5 immat -->
+        <int type="bool">0</int> <!-- 6 smoke -->
+        <int type="int">0</int>  <!-- 7 color -->
+        <float n="1" alias="/controls/flight/spoilers"/>
+        <int n="8" alias="/engines/engine/running"/>
+        <int n="9" alias="/gear/gear[5]/wow"/>
+        <int n="10" alias="/gear/gear[4]/wow"/>
+        <float n="2" alias="/velocities/airspeed-kt"/>
       </generic>
     </multiplay>
 
@@ -80,7 +86,7 @@
   </input>
 
    <instrumentation>
-      <kma20 include="Aircraft/YMF-5DF/Models/interior/Instruments/kma20/kma20init.xml"/>
+      <kma20 include="Models/interior/Instruments/kma20/kma20init.xml"/>
    </instrumentation>
 
   <nasal>

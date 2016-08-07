@@ -4,6 +4,25 @@
 
   <path>YMF-5DF.ac</path>
 
+ <!-- Canopy -->
+    <animation>
+        <type>select</type>
+        <condition>
+            <not>
+                <property>/sim/rendering/rembrandt/enabled</property>
+            </not>
+        </condition>
+    <object-name>windshield-inn</object-name>
+    </animation>
+
+
+<!-- Uncomment this section for FG 3.5 ALS Glass effects -->
+    <effect>
+        <inherits-from>Effects/glass</inherits-from>
+    <object-name>windshield-inn</object-name>
+    </effect>
+
+
 <nasal>
 <load>
 var livery_update = aircraft.livery_update.new("Aircraft/YMF-5DF/Models/Liveries");
