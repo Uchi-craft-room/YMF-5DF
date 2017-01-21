@@ -36,15 +36,5 @@
     </axis>
   </animation>
 
-  <animation>
-    <type>select</type>
-    <condition>
-      <equals>
-      <property>gear/gear[0]/position-norm</property>
-      <value>1</value>
-      </equals>
-    </condition>
-  </animation>
 
- 
 </PropertyList>

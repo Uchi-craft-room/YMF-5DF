@@ -33,6 +33,14 @@
         <command>property-toggle</command>
         <property>sim/sound/click</property>
       </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/rendering/als-secondary-lights/use-taxi-light-ext</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/rendering/als-secondary-lights/use-landing-light-ext</property>
+      </binding>
     </action>
   </animation>
 

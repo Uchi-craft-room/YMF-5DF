@@ -117,10 +117,38 @@ livery_update.stop();
     <object-name>lenz</object-name>
   </animation>
 
+  <model>
+    <name>shadowOSG</name>
+    <path>Aircraft/YMF-5DF/Models/shadow.xml</path>
+	<offsets>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> -1.0 </z-m>
+	</offsets>
+  </model>
+
+ <animation>
+    <type>select</type>
+    <object-name>shadowOSG</object-name>
+    <condition>
+      <and>
+      <equals>
+        <property>/sim/rendering/rembrandt/enabled</property>
+        <value>false</value>
+      </equals>
+      <equals>
+        <property>/sim/replay/replay-state</property>
+        <value>0</value>
+      </equals>
+      <property>gear/gear/ground-is-solid</property>
+      </and>
+    </condition>
+  </animation>
+
 <!-- Pushback -->
 <model>
  <name>Pushback</name>
- <path>Aircraft\YMF-5DF\Models\towing_car\towing_car.xml</path>
+ <path>Aircraft/YMF-5DF/Models/towing_car/towing_car.xml</path>
   <condition>
  <less-than-equals>
      <property>velocities/airspeed-kt</property>
@@ -139,7 +167,7 @@ livery_update.stop();
 <!-- Trailer -->
 <model>
  <name>Trailer</name>
- <path>Aircraft\YMF-5DF\Models\trailer\trailer.xml</path>
+ <path>Aircraft/YMF-5DF/Models/trailer/trailer.xml</path>
   <condition>
  <less-than-equals>
      <property>velocities/airspeed-kt</property>
@@ -152,6 +180,17 @@ livery_update.stop();
             <z-m>-2.50</z-m>
  </offsets>
 </model> 
+
+  <animation>
+    <type>select</type>
+    <object-name>Trailer</object-name>
+    <condition>
+      <equals>
+      <property>gear/gear[0]/position-norm</property>
+      <value>1</value>
+      </equals>
+    </condition>
+  </animation>
 
 <model>
 	<path>Aircraft/YMF-5DF/Models/engine/engine.ac</path>
@@ -542,6 +581,16 @@ livery_update.stop();
     </offsets>
   </model>
 
+    <model>
+        <name>nav-light-left</name>
+        <path>effects/lights/procedural_light_nav_left.xml</path>
+        <offsets>
+       <x-m> -0.7 </x-m>
+      <y-m> -4.65 </y-m>
+      <z-m>  1.15</z-m>
+        </offsets>
+    </model>
+
   <model>
     <name>Green</name>
     <path>Aircraft/YMF-5DF/Models/light/GreenLight.xml</path>
@@ -551,6 +600,16 @@ livery_update.stop();
       <z-m>  1.15</z-m>
     </offsets>
   </model>
+
+    <model>
+        <name>nav-light-right</name>
+        <path>effects/lights/procedural_light_nav_right.xml</path>
+        <offsets>
+      <x-m> -0.7 </x-m>
+      <y-m>  4.65 </y-m>
+      <z-m>  1.15</z-m>
+        </offsets>
+    </model>
 
   <model>
     <name>Strobe0</name>
@@ -582,9 +641,25 @@ livery_update.stop();
     </offsets>
   </model>
 
+   <model>
+        <name>nav-light-tail</name>
+        <path>effects/lights/procedural_light_nav_tail.xml</path>
+        <offsets>
+      <x-m> 4.15</x-m>
+      <y-m>  0 </y-m>
+      <z-m> 0.06 </z-m>
+      <pitch-deg> 0.00 </pitch-deg>
+      <heading-deg> 180 </heading-deg>
+        </offsets>
+    </model>
+
   <animation>
     <type>select</type>
     <object-name>Tail-Light</object-name>
+        <object-name>nav-light-left</object-name>
+        <object-name>nav-light-right</object-name>
+        <object-name>nav-light-left</object-name>
+        <object-name>nav-light-tail</object-name>
     <condition>
           <property>controls/lighting/nav-lights</property>
     </condition>

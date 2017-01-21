@@ -5,11 +5,11 @@
 <sim>
 <model>
 <livery>
-<name type="string">HiTouch</name>
-<texture>Liveries/HiTouch.png</texture>
+<name type="string">Stearman</name>
+<texture>Liveries/Stearman.png</texture>
 </livery>
 <livery-logo>
-<texture>Liveries/HiTouch.png</texture>
+<texture>Liveries/Stearman.png</texture>
 </livery-logo>
 </model>
 </sim>
