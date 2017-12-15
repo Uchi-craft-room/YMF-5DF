@@ -52,7 +52,7 @@
   <hstab x="-3.8" y="0.05" z="0.5" chord="1.5" length="1.6" taper="0.5" sweep="0">
          <stall aoa="12" width="4.0" peak="1.5"/>
          <flap0 start="0.0" end="1.0" lift="1.5" drag="1.8"/>
-         <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+         <control-input axis="/controls/flight/elevator" control="FLAP0" square="true"/>
          <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
          <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
          <control-output control="FLAP0" prop="/surface-positions/elevator-trim-pos-norm"/>
@@ -110,25 +110,39 @@
 
 <!--  FLOATS -->
 
-  <gear x="0.0" y="1.5" z="-2.1"  sfric="0.2" dfric="0.2" on-water="1" on-solid="1" ignore-by-solver="1" reduce-friction-by-extension="1.3" speed-planing="400" spring-factor-not-planing="3">
+  <gear x="0.0" y="1.5" z="-2.1"  sfric="0.4" dfric="0.4" on-water="1" on-solid="1" ignore-by-solver="1" reduce-friction-by-extension="1.3" speed-planing="400" spring-factor-not-planing="3">
   </gear>
 
-  <gear x="0.0" y="-1.5" z="-2.1" sfric="0.2" dfric="0.2" on-water="1" on-solid="1" ignore-by-solver="1"  reduce-friction-by-extension="1.3" speed-planing="400" spring-factor-not-planing="3">
+  <gear x="0.0" y="-1.5" z="-2.1" sfric="0.4" dfric="0.4" on-water="1" on-solid="1" ignore-by-solver="1"  reduce-friction-by-extension="1.3" speed-planing="400" spring-factor-not-planing="3">
   </gear>
 
 
-  <gear x="-1.5.0" y="1.5" z="-1.9"  sfric="0.2" dfric="0.2" on-water="1" on-solid="1" ignore-by-solver="1"  reduce-friction-by-extension="1.15" speed-planing="400" spring-factor-not-planing="2.8">
+  <gear x="-1.5" y="1.5" z="-1.9"  sfric="0.4" dfric="0.4" on-water="1" on-solid="1" ignore-by-solver="1"  reduce-friction-by-extension="1.15" speed-planing="400" spring-factor-not-planing="2.8">
         <control-input axis="/controls/flight/rudder" control="STEER" src0="-1.0" src1="1.0" dst0="1" dst1="-1"/>
   </gear>
 
-  <gear x="-1.5" y="-1.5" z="-1.9"  sfric="0.2" dfric="0.2" on-water="1" on-solid="1"  ignore-by-solver="1" reduce-friction-by-extension="1.15" speed-planing="400" spring-factor-not-planing="2.8">
+  <gear x="-1.5" y="-1.5" z="-1.9"  sfric="0.4" dfric="0.4" on-water="1" on-solid="1"  ignore-by-solver="1" reduce-friction-by-extension="1.15" speed-planing="400" spring-factor-not-planing="2.8">
         <control-input axis="/controls/flight/rudder" control="STEER" src0="-1.0" src1="1.0" dst0="1" dst1="-1"/>
   </gear>
 
-  <gear x="2.0" y="1.5" z="-2.2"  sfric="0.2" dfric="0.2" on-water="1" on-solid="1"  ignore-by-solver="1"  reduce-friction-by-extension="1.3" speed-planing="400" spring-factor-not-planing="4">
+  <gear x="-0.7" y="1.5" z="-1.9"  sfric="0.4" dfric="0.4" on-water="1" on-solid="1" ignore-by-solver="1"  reduce-friction-by-extension="1.15" speed-planing="400" spring-factor-not-planing="2.8">
+        <control-input axis="/controls/flight/rudder" control="STEER" src0="-1.0" src1="1.0" dst0="1" dst1="-1"/>
   </gear>
 
-  <gear x="2.0" y="-1.5" z="-2.2" sfric="0.2" dfric="0.2" on-water="1" on-solid="1"  ignore-by-solver="1" reduce-friction-by-extension="1.3" speed-planing="400" spring-factor-not-planing="4">
+  <gear x="-0.7" y="-1.5" z="-1.9"  sfric="0.4" dfric="0.4" on-water="1" on-solid="1"  ignore-by-solver="1" reduce-friction-by-extension="1.15" speed-planing="400" spring-factor-not-planing="2.8">
+        <control-input axis="/controls/flight/rudder" control="STEER" src0="-1.0" src1="1.0" dst0="1" dst1="-1"/>
+  </gear>
+
+  <gear x="1.0" y="1.5" z="-2.2"  sfric="0.4" dfric="0.4" on-water="1" on-solid="1"  ignore-by-solver="1"  reduce-friction-by-extension="1.3" speed-planing="400" spring-factor-not-planing="4">
+  </gear>
+
+  <gear x="1.0" y="-1.5" z="-2.2" sfric="0.4" dfric="0.4" on-water="1" on-solid="1"  ignore-by-solver="1" reduce-friction-by-extension="1.3" speed-planing="400" spring-factor-not-planing="4">
+  </gear>
+
+  <gear x="2.0" y="1.5" z="-2.2"  sfric="0.4" dfric="0.4" on-water="1" on-solid="1"  ignore-by-solver="1"  reduce-friction-by-extension="1.3" speed-planing="400" spring-factor-not-planing="4">
+  </gear>
+
+  <gear x="2.0" y="-1.5" z="-2.2" sfric="0.4" dfric="0.4" on-water="1" on-solid="1"  ignore-by-solver="1" reduce-friction-by-extension="1.3" speed-planing="400" spring-factor-not-planing="4">
   </gear>
 
 <!-- The FLOATS ON GROUND-->
@@ -156,6 +170,7 @@
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
         <control-speed control="EXTEND" transition-time="2"/>v
     </gear>
+
 
   <tank x="0.6" y="0.5" z="1.0" capacity="144.2" />
   <tank x="0.6" y="-0.5" z="1.0" capacity="144.2" />

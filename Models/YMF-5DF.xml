@@ -4,6 +4,13 @@
 
   <path>YMF-5DF.ac</path>
 
+
+    <effect>
+        <name>refrect-effect</name>
+        <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+        <object-name>prop</object-name>
+    </effect>
+
  <!-- Canopy -->
     <animation>
         <type>select</type>
@@ -76,7 +83,7 @@ livery_update.stop();
 <object-name>pillar-ctr-rh</object-name>
 <object-name>pillar-lh</object-name>
 <object-name>pillar-rh</object-name>
-<object-name>prop </object-name>
+<object-name>prop</object-name>
 <object-name>prop-high</object-name>
 <object-name>cockpit_cowl</object-name>
 <object-name>cowl-add</object-name>
