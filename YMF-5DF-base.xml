@@ -6,14 +6,9 @@
 
     <fuel-fraction>1.0</fuel-fraction>
 
-    <startup>
-      <splash-texture>Aircraft/YMF-5DF/YMF-5DF-splash.png</splash-texture>
-    </startup>
-
     <sound>
       <path archive="y">Aircraft/YMF-5DF/Sounds/YMF-5DF-sound.xml</path>
     </sound>
-
 
     <model>
       <path archive="y">Aircraft/YMF-5DF/Models/YMF-5DF.xml</path>

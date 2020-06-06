@@ -3,11 +3,34 @@
 <PropertyList include="YMF-5DF-base.xml">
 
   <sim>
-    <description>YMF-5DF (YASim)</description>
-    <long-description>Ver.1.5</long-description>
-    <author>Hitoshi Uchida 'HiTouch'(3D/FDM)</author>
-    <flight-model archive="y">yasim</flight-model>
-    <aero archive="y">YMF-5DF-yasim</aero>
+	<description>YMF-5DF (YASim)</description>
+	<long-description>Ver.1.6</long-description>
+	<author>Hitoshi Uchida 'HiTouch'(3D/FDM)</author>
+	<rating>
+		<FDM type="int">0</FDM>
+		<systems type="int">0</systems>
+		<cockpit type="int">0</cockpit>
+		<model type="int">0</model>
+	</rating>
+	<flight-model archive="y">yasim</flight-model>
+	<aero archive="y">YMF-5DF-yasim</aero>
+	<previews>
+		<preview>
+			<type>exterior</type>
+			<splash type="bool">true</splash>
+			<path>Splash/exterior1.jpg</path>
+		</preview>
+		<preview>
+			<type>exterior</type>
+			<splash type="bool">true</splash>
+			<path>Splash/exterior2.jpg</path>
+		</preview>
+		<preview>
+			<type>exterior</type>
+			<splash type="bool">true</splash>
+			<path>Splash/exterior3.jpg</path>
+		</preview>
+	</previews>
 
   </sim>
 
